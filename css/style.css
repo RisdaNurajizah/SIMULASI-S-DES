@@ -1,0 +1,255 @@
+/* Custom Variable Colors - Nuansa IT Modern */
+:root {
+    --bg-color: #f0f4f8;
+    --card-bg: #ffffff;
+    --primary-color: #2b6cb0;
+    --primary-hover: #1a4971;
+    --accent-color: #319795;
+    --text-color: #2d3748;
+    --border-color: #e2e8f0;
+    --bit-one-bg: #ebf8ff;
+    --bit-one-border: #3182ce;
+    --bit-zero-bg: #fff5f5;
+    --bit-zero-border: #e53e3e;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: #718096;
+    font-weight: 500;
+}
+
+/* Desain Komponen Card */
+.card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border-color);
+}
+
+.card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--bg-color);
+    padding-bottom: 0.5rem;
+}
+
+/* Desain Form Element */
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: border-color 0.2s;
+}
+
+.form-group input[type="text"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.form-group-row {
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.form-group-row label {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Desain Tombol */
+.button-group {
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    flex: 1;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--primary-hover);
+}
+
+button[type="reset"] {
+    background-color: #edf2f7;
+    color: #4a5568;
+}
+
+button[type="reset"]:hover {
+    background-color: #e2e8f0;
+}
+
+.btn-secondary {
+    background-color: var(--accent-color);
+    color: white;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.btn-secondary:hover {
+    background-color: #287e7c;
+}
+
+/* Komponen Representasi Blok Bit (Array UI) */
+.bit-container {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+.bit-row {
+    display: flex;
+    gap: 0.35rem;
+}
+
+.bit-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    border: 2px solid;
+}
+
+.bit-box.one {
+    background-color: var(--bit-one-bg);
+    border-color: var(--bit-one-border);
+    color: #2b6cb0;
+}
+
+.bit-box.zero {
+    background-color: var(--bit-zero-bg);
+    border-color: var(--bit-zero-border);
+    color: #c53030;
+}
+
+/* Desain Section Hasil / Solusi Detail Step-by-Step */
+.solution-block {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 2px dashed var(--border-color);
+}
+
+.solution-block h3 {
+    font-size: 1.1rem;
+    color: #2d3748;
+    margin-bottom: 1rem;
+    background: #edf2f7;
+    padding: 0.4rem 0.8rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+.round-title {
+    margin: 1.2rem 0 0.5rem 0;
+    color: var(--accent-color);
+    font-size: 1rem;
+}
+
+.step-item {
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+}
+
+.step-item p {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+    color: #4a5568;
+}
+
+.nested-step {
+    background: #f7fafc;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    border-left: 3px solid var(--accent-color);
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+.flex-row {
+    display: flex;
+    gap: 2rem;
+    margin-top: 0.25rem;
+}
+
+.flex-row>div {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.highlight-swap {
+    background: #f0fff4;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px dashed #38a169;
+}
+
+/* Kelas Pembantu */
+.hidden {
+    display: none !important;
+}

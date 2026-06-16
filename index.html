@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulasi Kriptografi S-DES</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Simulasi Algoritma S-DES</h1>
+            <p>Simplified Data Encryption Standard</p>
+        </header>
+
+        <div class="card">
+            <form id="sdesForm">
+                <div class="form-group">
+                    <label for="inputData">Input Data (8-bit biner):</label>
+                    <input type="text" id="inputData" placeholder="Contoh: 10100101" maxlength="8" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputKey">Kunci / Key (10-bit biner):</label>
+                    <input type="text" id="inputKey" placeholder="Contoh: 1010000010" maxlength="10" required>
+                </div>
+
+                <div class="form-group-row">
+                    <label>Mode Operasi:</label>
+                    <label>
+                        <input type="radio" name="mode" value="encrypt" checked> Enkripsi
+                    </label>
+                    <label>
+                        <input type="radio" name="mode" value="decrypt"> Dekripsi
+                    </label>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit">SUBMIT</button>
+                    <button type="reset">RESET</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="resultSection" class="card hidden">
+            <h2>📊 Hasil Pemrosesan</h2>
+
+            <div class="bit-container">
+                <div id="finalOutput"></div>
+            </div>
+
+            <button id="btnToggleSolusi" class="btn-secondary">Tampilkan Solusi Penyelesaian</button>
+
+            <div id="solutionDetail" class="hidden"></div>
+        </div>
+    </div>
+
+    <script src="js/main.js" type="module"></script>
+</body>
+
+</html>
